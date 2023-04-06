@@ -8,7 +8,7 @@
     @apply h-5 w-5 rounded-full bg-gray-400 absolute left-0 top-0 transform scale-125 transition duration-200;
 }
 #toggleMute:checked::after{
-    @apply transform scale-125 translate-x-5 bg-teal-400;
+    @apply transform scale-125 translate-x-5 bg-red-500;
 }
 #toggleDarkmode::after{
     content: '';
@@ -17,3 +17,10 @@
 #toggleDarkmode:checked::after{
     @apply transform scale-125 translate-x-6 bg-sky-400;
 }
+
+.mobile-menu-button{
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45
+            [&>div::after]:translate-y-0 [&>div::after]:-rotate-45
+            [&>div]:bg-transparent
+}
+
